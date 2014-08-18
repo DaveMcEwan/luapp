@@ -1,0 +1,42 @@
+Hello world!
+
+#-- Comment
+ # Hash at start of line after first column
+$('#') Hash at first column
+
+#--[[ Block comment
+SHOULD NOT BE IN OUTPUT
+BLOCK COMMENTS BROKEN
+#--]]
+
+#---[[ Unblocked block comment
+This should appear.
+#--]]
+
+Global variable
+#tstvar = "hello"
+The test variable says $(tstvar)
+
+Simple loop with local variable and library call
+#local n = 10
+#for i = 0, n do
+  var$(i) = $(math.sin(math.pi * i / n))
+#end
+
+Complex loop
+#for a = 0, 3 do
+#  for b = 2, 4 do
+#    if b ~= 3 then
+  a = $(a), b = $(b)
+#    end
+#  end
+#end
+
+Environment variable
+$(USER) created this file
+
+#if DEBUG then
+  Debug equals $(DEBUG)
+#else
+  Debug is false
+#end

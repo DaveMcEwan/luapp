@@ -1,0 +1,142 @@
+
+/* luapp spec theme */
+/* Copied from http://johnmacfarlane.net/pandoc/demo/pandoc.css */
+
+body {
+    margin: auto;
+    padding-right: 1em;
+    padding-left: 1em;
+    max-width: 80%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    color: black;
+    font-family: Verdana, sans-serif;
+    font-size: 100%;
+    line-height: 140%;
+    color: #333;
+}
+
+pre {
+    border: 1px dotted gray;
+    background-color: #ececec;
+    color: #1111111;
+    padding: 0.5em;
+    line-height: 100%;
+}
+
+code {
+    font-family: monospace;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+    text-decoration: none;
+    color: #7a5ada;
+}
+
+h1, h2, h3, h4, h5 { font-family: verdana;
+    font-weight: bold;
+    border-bottom: 1px dotted black;
+    color: #7a5ada;
+}
+
+h1 {
+    font-size: 130%;
+}
+
+h2 {
+    font-size: 110%;
+}
+
+h3 {
+    font-size: 95%;
+}
+
+h4 {
+    font-size: 90%;
+    font-style: italic;
+}
+
+h5 {
+    font-size: 90%;
+    font-style: italic;
+}
+
+div#header h1.title {
+    font-size: 200%;
+    font-weight: bold;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    text-align: center;
+    border: none;
+}
+
+div#header h2.author,
+div#header h3.date {
+    font-size: 80%;
+    font-weight: normal;
+    text-align: right;
+    border: none;
+}
+
+dt code {
+    font-weight: bold;
+}
+
+dd p {
+    margin-top: 0;
+}
+
+td.lineNumbers {
+    width: 2em;
+}
+
+#footer {
+    padding-top: 1em;
+    font-size: 70%;
+    color: gray;
+    text-align: center;
+}
+
+
+/* Table Of Contents */
+div#TOC a:link {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+div#TOC a:hover {
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+div#TOC {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/* Figure */
+div.figure {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border: thin solid silver;
+    text-align: center;
+}
+
+div.figure p.caption {
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+}
+
+div.figure img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.figure svg {
+    width: 99%;
+}
+

@@ -1,0 +1,38 @@
+Hello world!
+
+ # Hash at start of line after first column
+# Hash at first column
+
+
+This should appear.
+
+Global variable
+The test variable says hello
+
+Simple loop with local variable and library call
+  var0 = 0
+  var1 = 0.30901699437495
+  var2 = 0.58778525229247
+  var3 = 0.80901699437495
+  var4 = 0.95105651629515
+  var5 = 1
+  var6 = 0.95105651629515
+  var7 = 0.80901699437495
+  var8 = 0.58778525229247
+  var9 = 0.30901699437495
+  var10 = 1.2246467991474e-16
+
+Complex loop
+  a = 0, b = 2
+  a = 0, b = 4
+  a = 1, b = 2
+  a = 1, b = 4
+  a = 2, b = 2
+  a = 2, b = 4
+  a = 3, b = 2
+  a = 3, b = 4
+
+Environment variable
+USER created this file
+
+  Debug is false
