@@ -9,15 +9,12 @@ code by RiciLake and David Manura, which in turn was loosely based on
 Design Qualities
 ================
 
-This module has the following characteristics:
-
-- This module is intended to be robust and fully tested.
-- It is implemented entirely in Lua.
-- The syntax is quite simple and unambiguous.
-  There are two syntaxes available for embedding Lua preprocessor code in your
-    text: $(...) or "#...".
-  The former resembles the "Makefile", M4, or Perl style.
-  The latter resembles the C preprocessor style.
+This module is implemented entirely in Lua and is intended to be robust with
+  a simple and unambiguous syntax.
+There are two syntaxes available for embedding Lua preprocessor code in your
+  text: $(...) or "#...".
+The former resembles the "Makefile", M4, or Perl style.
+The latter resembles the C preprocessor style.
 
 ~~~
     $(for x=1,3 do _put(x) end)
@@ -29,8 +26,7 @@ This module has the following characteristics:
     #end
 ~~~
 
-- The `#...` style allows text to be nested (lexically) in Lua code to be
-    nested to text to be nested in Lua code, etc.
+- The `#...` style allows text to be nested (lexically) in Lua code.
   For example:
 
 ~~~
@@ -55,15 +51,15 @@ This module has the following characteristics:
     x and y are now nil and nil
 ~~~
 
-- The module will try to report an meangingful error if syntax is bad:
+- The module will try to report an meangingful error if syntax is bad e.g.
   `$(if x then then)`.
-  However, there are probaby cases where it fails in this.
+  However, there are probably cases where it fails in this.
 - It is possible to run the preprocessor on untrusted source.
   Just set the lookup table to `nil` or to a custom table.
 - The processor loads the entire source into memory.
   For very large files that exceed available RAM, this might not be suitable.
-- Speed should be reasonably good, though probabily not optimal due to
-  checks (it has not been performance tested).
+- Speed should be reasonably good, though probably not optimal due to checks
+  (it has not been performance tested).
   There may be room for some optimization.
 
 
@@ -126,16 +122,14 @@ Preprocesses text.
 - `output` - output destination.
     This can be a writable filepath.
     If omitted, this will be STDOUT.
-- lookup` - lookup table used for retrieving the values of global variables
+- `lookup` - lookup table used for retrieving the values of global variables
     referenced by the preprocessed file.
     Global writes in the preprocessed file are not written to this table.
     If omitted, all global accesses will have the value `nil`.
     Often, this value is set to `_G` (the global table).
 - `strict` - enable strict-like mode on global variables.
     Accessing global variables with value `nil` triggers an error.
-    `true` or `false`.
-    Default `true`.
-- `result` - the result.
+- `result` - the resultant processed text.
     The is normally the processed text (if output is set to 'string') or true.
     On failure, this is set to false and message is set.
 - `message` - the error message string.
